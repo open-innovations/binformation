@@ -1,0 +1,9 @@
+---
+layout: template/page.njk
+---
+
+{{ comp.store.links({ app_links: app_link }) | safe }}
+
+{{ content | safe }}
+
+<img src="/assets/img/screenshots/{{ id }}.png" alt="Screenshots of the {{ title }} app"/>

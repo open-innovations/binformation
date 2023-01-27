@@ -1,0 +1,18 @@
+---
+css: |
+  .app-links {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  .app-links * + * {
+    margin-top: 0;
+  }
+  .app-links img {
+    height: 3rem;
+  }
+---
+<div class="app-links">
+  <a href="{{ app_links.apple }}" target="_blank"><img src="/assets/img/stores/iPhone_app.png"></a>
+  <a href="{{ app_links.android }}" target="_blank"><img src="/assets/img/stores/play_app.png"></a>
+</div>

@@ -4,11 +4,12 @@ import date from "lume/plugins/date.ts";
 import metas from "lume/plugins/metas.ts";
 import postcss from "lume/plugins/postcss.ts";
 
+const search = { returnPageData: true };
 const site = lume({
   src: './src',
   // TODO Update this with the proper URL
-  location: new URL("https://open-innovations.github.io/oi-lume-template/"),
-});
+  location: new URL("https://open-innovations.github.io/binformation/"),
+}, { search });
 
 site.use(base_path());
 site.use(metas({
@@ -18,6 +19,8 @@ site.use(metas({
 }));
 site.use(date());
 site.use(postcss({}));
+
+site.copy("assets/img");
 
 site.copy('CNAME');
 site.copy('.nojekyll');
